@@ -32,9 +32,9 @@
 
 ```
 ├── index.html        # Главная страница со всем UI и JS
-├── style.css         # (Опционально) внешние стили
-├── script.js         # jQuery логика (можно вынести из HTML)
-└──  README.md         # Документация
+├── style.css         # Внешние стили
+├── script.js         # jQuery логика
+└── README.md         # Документация
 ```
 
 ---
