@@ -1,91 +1,234 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <title>Простой Bootstrap + jQuery проект для Миграционное агентство Мигрон</title>
+    <title>Front-end: Я здесь, чтобы покодить!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1 class="mb-4">Пример сайта на Bootstrap и jQuery</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" data-bs-toggle="tooltip" title="Нажми, если хочешь быть крутым"
+                id="coolBrand">Front-end №1</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- tabs -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">Главная</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">Профиль</button>
-            </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active p-3 border border-top-0" id="home" role="tabpanel">
-                Контент главной страницы.
-            </div>
-            <div class="tab-pane fade p-3 border border-top-0" id="profile" role="tabpanel">
-                Контент профиля.
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#about" data-bs-toggle="tooltip"
+                            title="Узнай больше обо мне">Обо мне</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills" data-bs-toggle="tooltip"
+                            title="Прокачка +100 к навыкам">Навыки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-bs-toggle="tooltip"
+                            title="Свяжись со мной">Контакты</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <!-- accordion -->
-        <div class="accordion my-4" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                        Первый пункт
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show">
-                    <div class="accordion-body">
-                        Контент первого пункта аккордеона.
+    <section class="hero-section text-center">
+        <div class="alert alert-info alert-bottom d-none" id="bottomAlert" role="alert">
+            Всё, ты крут 😎
+        </div>
+        <div class="container">
+            <h1 class="display-4">Привет, я фронтендер!</h1>
+            <p class="lead">Хочу работать с вами</p>
+            <p class="lead">Пишу код, как поэзия. Только с багами :)</p>
+            <button class="btn btn-primary mt-3" id="magicBtn" data-bs-toggle="tooltip" title="Щёлкни меня!">Показать
+                магию jQuery</button>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://picsum.photos/700/150?random=1" class="d-block w-100"
+                        alt="некая рандомная картинка">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/700/150?random=2" class="d-block w-100"
+                        alt="некая рандомная картинка">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/700/150?random=3" class="d-block w-100"
+                        alt="некая рандомная картинка">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <section class="container my-5" id="about">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card" data-bs-toggle="tooltip" title="Это я, настоящий!">
+                    <div class="card-header">Кто я?</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Front-end гуру</h5>
+                        <p class="card-text">Люблю Bootstrap, jQuery и уютные IDE. Отпишусь в чат как только отлажу код.
+                        </p>
+                        <a href="#skills" class="btn btn-outline-primary" data-bs-toggle="tooltip"
+                            title="Вперёд к навыкам">Навыки</a>
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                        Второй пункт
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Контент второго пункта аккордеона.
+            <div class="col-md-6">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne">
+                                Почему я?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Потому что я знаю, как работает margin: auto.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo">
+                                Где я училась?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                В университете жизни и на YouTube.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- button modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Открыть модальное окно
-        </button>
-
-        <!-- modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Модальное окно</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+    <section class="container my-5" id="skills">
+        <h2 class="text-center mb-4">Мои навыки</h2>
+        <div class="progress mb-4">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                aria-valuemin="0" aria-valuemax="100">
+                Уровень крутоты: 80%
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100 text-center" data-bs-toggle="tooltip" title="Карточка с Bootstrap!">
+                    <div class="card-body">
+                        <h5 class="card-title">Bootstrap, JavaScript, TypeScript, Hugo, HTML5, CSS3, Tailwind, React, CSS, Markdown</h5>
+                        <p class="card-text">Верстаю быстрее, чем вы успеете сказать "media query".</p>
                     </div>
-                    <div class="modal-body">
-                        Это пример модального окна.
+                    <div class="card-footer">
+                        <small class="text-muted">Использую каждый день</small>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                        <button type="button" class="btn btn-primary">Сохранить</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">jQuery</h5>
+                        <p class="card-text">Селекторы, эффекты, AJAX? Легко.</p>
+                        <button class="btn btn-sm btn-outline-info" id="jqueryDemo" data-bs-toggle="tooltip"
+                            title="Нажми для эффекта">Показать эффект</button>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Немного магии</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Адаптив</h5>
+                        <p class="card-text" data-bs-toggle="tooltip" title="Но не факт">Мой сайт работает на
+                            холодильнике и на ракете Илона Маска.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Проверено лично</small>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- button jQuery -->
-        <button id="jqueryButton" class="btn btn-success mt-4">Нажми меня (jQuery)</button>
-        <p id="jqueryResult" class="mt-2"></p>
-    </div>
+    <section class="container my-5" id="contact">
+        <h2 class="text-center mb-4">Связаться со мной</h2>
+        <form id="contactForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Имя</label>
+                <input type="text" class="form-control" id="name" data-bs-toggle="tooltip" title="Введите ваше имя">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" data-bs-toggle="tooltip" title="Введите ваш email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Сообщение</label>
+                <textarea class="form-control" id="message" rows="3" data-bs-toggle="tooltip"
+                    title="Напишите что-нибудь весёлое"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success" data-bs-toggle="tooltip"
+                title="Отправь меня в космос!">Отправить</button>
+        </form>
+        <div class="toast-container">
+            <div id="liveToast"
+                class="toast align-items-center text-bg-success border-0 position-fixed top-50 start-50 translate-middle"
+                role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        Сообщение успешно улетело в космос 🚀
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Закрыть"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <p>Сделано с любовью и jQuery для Мигрон. @2025</p>
+            <div class="contact-icons mt-3">
+                <a href="mailto:vsemusvetu3112@gmail.com" target="_blank" data-bs-toggle="tooltip" title="Email"><i
+                        class="bi bi-envelope"></i></a>
+                <a href="https://t.me/vsemusvetu" target="_blank" data-bs-toggle="tooltip" title="Telegram"><i
+                        class="bi bi-telegram"></i></a>
+                <a href="https://hh.ru/resume/8784d233ff087bf58a0039ed1f6e7574663674" target="_blank"
+                    data-bs-toggle="tooltip" title="hh"><i class="bi bi-file-person"></i></a>
+                <a href="https://www.linkedin.com/in/juliya-badrtdinova/" target="_blank" data-bs-toggle="tooltip"
+                    title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
